@@ -105,7 +105,7 @@ Former `:color`, `:drb`, `:fail_fast` and `:formatter` options are thus deprecat
 
 ``` ruby
 :version => 1                # force use RSpec version 1, default: 2
-:cli => "-c -f doc"          # pass arbitrary RSpec CLI arguments, default: "-f progress"
+:cli => "-c -f doc"          # pass arbitrary RSpec CLI arguments, default: nil
 :bundler => false            # don't use "bundle exec" to run the RSpec command, default: true
 :binstubs => true            # use "bin/rspec" to run the RSpec command (implies :bundler => true), default: false
 :rvm => ['1.8.7', '1.9.2']   # directly run your specs on multiple Rubies, default: nil
@@ -138,8 +138,6 @@ guard 'rspec', :cli => '-r rspec/instafail -f RSpec::Instafail' do
   # ...
 end
 ```
-
-Default formatter is the `progress` formatter (same as RSpec default).
 
 Running a subset of all specs
 -----------
